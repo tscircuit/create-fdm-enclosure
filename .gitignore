@@ -1,0 +1,10 @@
+node_modules
+dist
+cosmos-export
+coverage
+*.tgz
+*.tsbuildinfo
+*.diff.png
+.DS_Store
+.env*
+!.env.example
