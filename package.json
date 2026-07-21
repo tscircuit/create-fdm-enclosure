@@ -7,10 +7,14 @@
   "module": "./lib/index.ts",
   "types": "./lib/index.ts",
   "files": ["lib"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "cosmos",
     "build": "tsup lib/index.ts --format esm --dts --sourcemap",
     "build:site": "cosmos-export",
+    "vercel-build": "bun run build:site",
     "test": "bun test",
     "format": "biome format --write .",
     "format:check": "biome format ."
