@@ -3,11 +3,17 @@
   "version": "0.0.2",
   "description": "Generate FDM enclosure geometry from board dimensions and wall apertures",
   "type": "module",
-  "main": "./lib/index.ts",
-  "module": "./lib/index.ts",
-  "types": "./lib/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
@@ -15,9 +21,11 @@
   "scripts": {
     "start": "cosmos",
     "build": "tsup lib/index.ts --format esm --dts --sourcemap",
+    "prepack": "bun run build",
     "build:site": "cosmos-export",
     "vercel-build": "bun run build:site",
     "test": "bun test",
+    "test:node-import": "bun run build && node --input-type=module -e \"await import('@tscircuit/create-fdm-enclosure')\"",
     "format": "biome format --write .",
     "format:check": "biome format ."
   },
