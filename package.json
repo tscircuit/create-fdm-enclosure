@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@tscircuit/solver-utils": "^0.0.19",
+    "format-si-unit": "^0.0.12",
     "graphics-debug": "^0.0.96",
     "jscad-planner": "^0.0.14"
   },

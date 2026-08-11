@@ -4,7 +4,7 @@ import {
   getEnclosureSpanAlongAxis,
   getFaceTangentAxes,
 } from "../enclosure"
-import { formatMm } from "../validation/format-mm"
+import { formatMm } from "format-si-unit"
 import type { ResolvedFdmEnclosureDimensions } from "./types"
 
 /**

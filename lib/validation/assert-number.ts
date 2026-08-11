@@ -1,4 +1,4 @@
-import { formatMm } from "./format-mm"
+import { formatMm } from "format-si-unit"
 
 /**
  * Numeric guards for authored input.

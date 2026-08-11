@@ -1,6 +1,6 @@
 import { assertNonNegative, assertPositive } from "../validation/assert-number"
 import { getApertureClearanceDepth } from "./get-aperture-clearance-depth"
-import { formatMm } from "../validation/format-mm"
+import { formatMm } from "format-si-unit"
 import type { EnclosureBoardInput } from "../enclosure"
 import type { FdmDesignRules } from "./design-rules"
 import type {
