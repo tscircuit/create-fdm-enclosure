@@ -1,6 +1,6 @@
 {
   "name": "@tscircuit/create-fdm-enclosure",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Generate FDM enclosure geometry from board dimensions and wall apertures",
   "type": "module",
   "main": "./dist/index.js",
