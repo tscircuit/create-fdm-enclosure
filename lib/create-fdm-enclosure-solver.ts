@@ -22,7 +22,9 @@ const requireStage = <T>(stage: T | undefined, name: string): T => {
  * a default, resolves a fallback, or re-runs a validation rule.
  */
 export class CreateFdmEnclosureSolver extends BasePipelineSolver<CreateFdmEnclosureInput> {
-  static solverName = "CreateFdmEnclosureSolver"
+  override getSolverName(): string {
+    return "CreateFdmEnclosureSolver"
+  }
 
   resolveFdmEnclosureProblemSolver?: ResolveFdmEnclosureProblemSolver
   createFdmEnclosureShellSolver?: CreateFdmEnclosureShellSolver
